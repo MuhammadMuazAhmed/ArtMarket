@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useUser } from "../Context/usercontext";
 import { artworkAPI } from "../services/api";
 import Sidebar from "../Components/Sidebar";
-import Navbar from "../components/Navbar";
+import Navbar from "../Components/Navbar";
 import AnimatedBackground from "../Components/AnimatedBackground";
 import {
   TextField,
