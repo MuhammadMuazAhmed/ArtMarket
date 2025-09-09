@@ -71,6 +71,8 @@ export const corsOptions = {
       "http://localhost:5173",
       "http://localhost:4173",
       process.env.FRONTEND_URL,
+      "https://art-market-frontend.vercel.app",
+      "https://art-market.vercel.app",
     ].filter(Boolean);
 
     if (allowedOrigins.indexOf(origin) !== -1) {
