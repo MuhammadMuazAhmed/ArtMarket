@@ -1,0 +1,75 @@
+@keyframes slideBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animatedBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(45deg, 
+    rgba(66, 48, 125, 0.5), 
+    rgba(127, 86, 217, 0.5),
+    rgba(66, 48, 125, 0.5),
+    rgba(127, 86, 217, 0.5)
+  );
+  background-size: 400% 400%;
+  animation: slideBackground 15s ease infinite;
+}
+
+.backgroundImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.backgroundImage1 {
+  composes: backgroundImage;
+  animation: fade1 20s infinite;
+}
+
+.backgroundImage2 {
+  composes: backgroundImage;
+  animation: fade2 20s infinite;
+}
+
+.backgroundImage3 {
+  composes: backgroundImage;
+  animation: fade3 20s infinite;
+}
+
+@keyframes fade1 {
+  0%, 33.33% { opacity: 0.3; }
+  40%, 60% { opacity: 0; }
+  66.67%, 100% { opacity: 0; }
+}
+
+@keyframes fade2 {
+  0%, 33.33% { opacity: 0; }
+  40%, 60% { opacity: 0.3; }
+  66.67%, 100% { opacity: 0; }
+}
+
+@keyframes fade3 {
+  0%, 33.33% { opacity: 0; }
+  40%, 60% { opacity: 0; }
+  66.67%, 100% { opacity: 0.3; }
+}

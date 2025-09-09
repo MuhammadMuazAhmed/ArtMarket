@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Restore to original state before global theme or glassmorphism changes. Remove all global overrides, imports, and custom classes. */
+
+body,
+html {
+  font-family: inherit;
+  color: inherit;
+  background: none;
+}
+
+/* Minimalist, breathable spacing */
+body,
+.glass,
+.container,
+.card,
+.modal {
+  padding: 1.5rem;
+}
+
+/* Remove white/autofill background from inputs while keeping text visible */
+input, textarea, select {
+  background-color: transparent !important;
+  color: inherit;
+}
+
+/* Ensure Chrome/WebKit autofill doesn't paint a white/yellow background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: #ffffff;
+}
