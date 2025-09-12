@@ -10,7 +10,7 @@ import { artworkAPI, purchaseAPI } from "../services/api";
 import { useFilter } from "../Context/filtercontext";
 import { useUser } from "../Context/usercontext";
 
-const BACKEND_URL = "http://localhost:5000";
+const BACKEND_URL = "https://art-market-backend.vercel.app";
 
 function getImageUrl(imageUrl) {
   if (!imageUrl) return "";
