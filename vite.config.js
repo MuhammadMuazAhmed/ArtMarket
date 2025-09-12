@@ -11,5 +11,14 @@ export default defineConfig({
     rollupOptions: {
       external: [],
     },
+    chunkSizeWarningLimit: 1000,
+  },
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:5000",
+        changeOrigin: true,
+      },
+    },
   },
 });
