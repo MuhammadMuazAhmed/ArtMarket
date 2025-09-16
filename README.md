@@ -27,11 +27,6 @@ A modern, secure, and feature-rich art marketplace platform built with React, No
 - **Price Filtering**: Range-based price filtering for budget-conscious buyers
 - **Sorting Options**: Multiple sorting criteria for optimal browsing experience
 
-### 💳 **Purchase System**
-
-- **Secure Transactions**: Safe purchase process with buyer information collection
-- **Purchase History**: Track all transactions and artwork acquisitions
-- **Order Management**: Complete order tracking and management system
 
 ### 🛡️ **Security Features**
 
@@ -100,14 +95,8 @@ A modern, secure, and feature-rich art marketplace platform built with React, No
    npm install
    ```
 
-3. **Install backend dependencies**
 
-   ```bash
-   cd backend
-   npm install
-   ```
-
-4. **Environment Setup**
+3. **Environment Setup**
 
    ```bash
    # Copy environment template
@@ -117,12 +106,12 @@ A modern, secure, and feature-rich art marketplace platform built with React, No
    nano .env
    ```
 
-5. **Database Setup**
+4. **Database Setup**
 
    - Start MongoDB locally or use MongoDB Atlas
    - Update `MONGO_URI` in your `.env` file
 
-6. **Generate Security Keys**
+5. **Generate Security Keys**
 
    ```bash
    # Generate JWT secret
@@ -134,15 +123,7 @@ A modern, secure, and feature-rich art marketplace platform built with React, No
 
 ### **Running the Application**
 
-1. **Start Backend Server**
-
-   ```bash
-   cd backend
-   npm start
-   # Server runs on http://localhost:5000
-   ```
-
-2. **Start Frontend Development Server**
+1. **Start Frontend Development Server**
 
    ```bash
    cd my-app
@@ -150,38 +131,18 @@ A modern, secure, and feature-rich art marketplace platform built with React, No
    # Frontend runs on http://localhost:5173
    ```
 
-3. **Build for Production**
+2. **Build for Production**
    ```bash
    cd my-app
    npm run build
    npm run preview
    ```
 
-## 🔧 Configuration
-
-### **Environment Variables**
-
-```bash
-# Server Configuration
-NODE_ENV=development
-PORT=5000
-
-# Database
-MONGO_URI=mongodb://localhost:27017/artmarketplace
-
-# Security
-JWT_SECRET=your_64_character_secret
-FRONTEND_URL=http://localhost:5173
-
-# Rate Limiting
-RATE_LIMIT_MAX_REQUESTS=100
-AUTH_RATE_LIMIT_MAX=5
-UPLOAD_RATE_LIMIT_MAX=10
 
 # File Upload
 MAX_FILE_SIZE=5242880
 ALLOWED_FILE_TYPES=image/jpeg,image/png,image/gif,image/webp
-```
+
 
 ### **Security Configuration**
 
@@ -241,13 +202,6 @@ my-app/
 │   ├── pages/            # Page components
 │   ├── services/         # API service functions
 │   └── assets/           # Static assets
-├── backend/               # Backend server code
-│   ├── config/           # Configuration files
-│   ├── controllers/      # Route controllers
-│   ├── middleware/       # Custom middleware
-│   ├── models/           # Database models
-│   ├── routes/           # API routes
-│   └── uploads/          # File upload directory
 └── README.md             # This file
 ```
 
@@ -262,42 +216,7 @@ npm run preview      # Preview production build
 npm run lint         # Run ESLint
 ```
 
-#### **Backend**
 
-```bash
-npm start            # Start production server
-npm run dev          # Start development server with nodemon
-npm run test         # Run tests
-```
-
-### **API Endpoints**
-
-#### **Authentication**
-
-- `POST /api/auth/register` - User registration
-- `POST /api/auth/login` - User login
-
-#### **Artworks**
-
-- `GET /api/artworks` - Get all artworks with filtering
-- `GET /api/artworks/:id` - Get specific artwork
-- `POST /api/artworks/create` - Create new artwork
-- `PUT /api/artworks/:id` - Update artwork
-- `DELETE /api/artworks/:id` - Delete artwork
-
-#### **Users**
-
-- `GET /api/users/:userId` - Get user profile
-- `PUT /api/users/:userId/profile` - Update profile
-- `PUT /api/users/:userId/education` - Update education
-- `PUT /api/users/:userId/skills` - Update skills
-- `PUT /api/users/:userId/contact` - Update contact info
-
-#### **Purchases**
-
-- `POST /api/purchases` - Create purchase
-- `GET /api/purchases/history` - Get purchase history
-- `GET /api/purchases/:id` - Get specific purchase
 
 ## 🔒 Security Features
 
@@ -320,30 +239,6 @@ npm run test         # Run tests
 - Rate limiting and abuse prevention
 - Comprehensive error handling
 - Security monitoring and logging
-
-## 🧪 Testing
-
-### **Manual Testing**
-
-```bash
-# Test rate limiting
-curl -X POST http://localhost:5000/api/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{"email":"test@test.com","password":"test"}'
-
-# Test CORS
-curl -H "Origin: http://malicious.com" \
-  -H "Access-Control-Request-Method: POST" \
-  -X OPTIONS http://localhost:5000/api/auth/login
-```
-
-### **Security Testing**
-
-- Rate limiting verification
-- CORS policy testing
-- File upload security testing
-- Input validation testing
-- Authentication flow testing
 
 ## 📊 Performance
 
@@ -386,22 +281,6 @@ curl -H "Origin: http://malicious.com" \
 
 ## 🤝 Contributing
 
-### **Development Guidelines**
-
-1. Fork the repository
-2. Create a feature branch
-3. Follow coding standards
-4. Add tests for new features
-5. Submit a pull request
-
-### **Code Standards**
-
-- ESLint configuration
-- Prettier formatting
-- Component documentation
-- API documentation
-- Security review process
-
 ## 📚 Documentation
 
 ### **Additional Resources**
@@ -418,24 +297,8 @@ curl -H "Origin: http://malicious.com" \
 - [MongoDB Documentation](https://docs.mongodb.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🆘 Support
-
-### **Getting Help**
-
-- **Documentation**: Check this README and related docs
-- **Issues**: Report bugs via GitHub Issues
-- **Discussions**: Use GitHub Discussions for questions
-- **Security**: Report security issues privately
-
-### **Contact Information**
-
-- **Project Maintainer**: [Your Name]
-- **Email**: [your-email@domain.com]
-- **GitHub**: [your-github-username]
 
 ---
 
