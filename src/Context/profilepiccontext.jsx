@@ -12,7 +12,7 @@ export const ProfilePicProvider = ({ children }) => {
   // Determine current user id from localStorage (works regardless of provider order)
   const currentUserId = useMemo(() => {
     try {
-      const raw = localStorage.getItem("user");
+      const raw = sessionStorage.getItem("user");
       if (!raw) return null;
       const parsed = JSON.parse(raw);
       return parsed?.id || parsed?._id || null;

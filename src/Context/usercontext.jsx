@@ -13,8 +13,8 @@ export const UserProvider = ({ children }) => {
 
   // Check if user is logged in on app start
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    const userData = localStorage.getItem("user");
+    const token = sessionStorage.getItem("token");
+    const userData = sessionStorage.getItem("user");
 
     if (token && userData) {
       try {
@@ -24,8 +24,8 @@ export const UserProvider = ({ children }) => {
         setIsAuthenticated(true);
       } catch (error) {
         console.error("Error parsing user data:", error);
-        localStorage.removeItem("token");
-        localStorage.removeItem("user");
+        sessionStorage.removeItem("token");
+        sessionStorage.removeItem("user");
       }
     }
     setLoading(false);
@@ -37,8 +37,8 @@ export const UserProvider = ({ children }) => {
       const response = await authAPI.login({ email, password });
       const { token, user: userData } = response.data;
 
-      localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(userData));
+      sessionStorage.setItem("token", token);
+      sessionStorage.setItem("user", JSON.stringify(userData));
 
       setUser(userData);
       setUserType(userData.role || "");
@@ -71,8 +71,8 @@ export const UserProvider = ({ children }) => {
 
   // Logout function
   const logout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("user");
     setUser(null);
     setUserType("");
     setIsAuthenticated(false);
@@ -84,7 +84,7 @@ export const UserProvider = ({ children }) => {
     setUser((prev) => {
       const merged = { ...(prev || {}), ...(userData || {}) };
       setUserType(merged.role || "");
-      localStorage.setItem("user", JSON.stringify(merged));
+      sessionStorage.setItem("user", JSON.stringify(merged));
       return merged;
     });
   };
@@ -93,7 +93,7 @@ export const UserProvider = ({ children }) => {
   const updateProfilePic = (newPicUrl) => {
     setUser((prev) => {
       const updated = { ...(prev || {}), profilePic: newPicUrl };
-      localStorage.setItem("user", JSON.stringify(updated));
+      sessionStorage.setItem("user", JSON.stringify(updated));
       return updated;
     });
   };
@@ -103,7 +103,7 @@ export const UserProvider = ({ children }) => {
     try {
       const res = await userAPI.updateEducation(userId, education);
       setUser(res.data);
-      localStorage.setItem("user", JSON.stringify(res.data));
+      sessionStorage.setItem("user", JSON.stringify(res.data));
       return { success: true, user: res.data };
     } catch (error) {
       return {
