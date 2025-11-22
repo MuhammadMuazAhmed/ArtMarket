@@ -289,7 +289,7 @@ function Sidebar({ page }) {
         {/* Desktop static sidebar */}
         <div
           id="app-sidebar"
-          className="hidden md:block bg-black/20 backdrop-blur-sm w-1/4 pr-6 lg:pr-8 border rounded-xl text-white p-4 fixed top-8 left-8 bottom-8 z-20 overflow-y-auto"
+          className="hidden md:block bg-black/20 backdrop-blur-sm w-1/4 pr-6 lg:pr-8 border rounded-xl text-white p-4 fixed top-4 left-4 bottom-4 z-20 overflow-y-auto"
         >
           <style>{`#app-sidebar{-ms-overflow-style:none;scrollbar-width:none}#app-sidebar::-webkit-scrollbar{display:none}`}</style>
           {renderContent()}
@@ -339,7 +339,7 @@ function Sidebar({ page }) {
         {/* Desktop static sidebar */}
         <div
           id="app-sidebar"
-          className="hidden md:block bg-black/20 backdrop-blur-sm w-1/4 pr-6 lg:pr-8 border rounded-xl text-white p-4 fixed top-8 left-8 bottom-8 z-20 overflow-y-auto"
+          className="hidden md:block bg-black/20 backdrop-blur-sm w-1/4 pr-6 lg:pr-8 border rounded-xl text-white p-4 fixed top-4 left-4 bottom-4 z-20 overflow-y-auto"
         >
           <style>{`#app-sidebar{-ms-overflow-style:none;scrollbar-width:none}#app-sidebar::-webkit-scrollbar{display:none}`}</style>
           {renderContent()}

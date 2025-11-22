@@ -17,12 +17,7 @@
   right: 0;
   bottom: 0;
   z-index: -1;
-  background: linear-gradient(45deg, 
-    rgba(66, 48, 125, 0.5), 
-    rgba(127, 86, 217, 0.5),
-    rgba(66, 48, 125, 0.5),
-    rgba(127, 86, 217, 0.5)
-  );
+  
   background-size: 400% 400%;
   animation: slideBackground 15s ease infinite;
 }

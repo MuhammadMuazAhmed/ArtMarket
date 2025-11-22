@@ -77,13 +77,14 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row p-4 sm:p-6 lg:p-8 gap-2 relative h-screen overflow-hidden">
+    <div className="flex flex-col md:flex-row p-4 sm:p-6 lg:p-8 gap-2 md:gap-0 fixed inset-0">
       <AnimatedBackground />
       {/* Left Side */}
       <div
         className="w-full md:w-[35%] relative bg-cover bg-center flex items-start md:items-center justify-center border rounded-xl overflow-hidden"
         style={{
           backgroundImage: `url(${loginBg})`,
+          height: "calc(100vh - 2rem)",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#42307d]/80 to-[#7f56d9]/80 border rounded-xl"></div>
@@ -150,7 +151,8 @@ const LoginPage = () => {
       </div>
 
       {/* Right Side */}
-      <div className="w-full md:w-[65%] flex flex-col justify-start md:justify-center px-6 sm:p-10 lg:px-16 items-center bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-md border border-white/30 rounded-xl md:ml-2 py-12 md:py-0 overflow-hidden">
+      <div className="w-full md:w-[65%] flex flex-col justify-start md:justify-center px-6 sm:p-10 lg:px-16 items-center bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-md border border-white/30 rounded-xl md:ml-2 py-12 md:py-0 overflow-y-auto"
+        style={{ height: "calc(100vh - 2rem)" }}>
         <form onSubmit={handleSubmit} className="mt-4 md:mt-6 w-full max-w-sm">
           <div className="text-center mb-4 md:mb-6">
             <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2">

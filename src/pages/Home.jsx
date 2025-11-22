@@ -120,7 +120,7 @@ const Home = () => {
       <Sidebar page="Home" />
       {/* rightside */}
       <div
-        className="w-full md:w-[calc(75%-32px)] bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-md flex flex-col border border-white/30 rounded-xl md:ml-[calc(25%+32px)] p-3 sm:p-4 overflow-y-auto"
+        className="w-full md:w-[calc(75%-16px)] bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-md flex flex-col border border-white/30 rounded-xl md:ml-[calc(25%+16px)] p-3 sm:p-4 overflow-y-auto"
         style={{
           height: "calc(100vh - 2rem)",
           backgroundColor: "rgba(0, 0, 0, 0.2)",

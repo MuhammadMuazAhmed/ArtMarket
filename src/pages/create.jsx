@@ -245,7 +245,7 @@ function Create() {
       <AnimatedBackground />
       <Sidebar page="Post" />
       <div
-        className="bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-md md:ml-[calc(25%+32px)] w-full md:w-[calc(75%-32px)] h-[calc(100vh-64px)] flex flex-col rounded-xl border border-white/20 overflow-hidden overflow-y-auto"
+        className="bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-md md:ml-[calc(25%+16px)] w-full md:w-[calc(75%-16px)] h-[calc(100vh-64px)] flex flex-col rounded-xl border border-white/20 overflow-hidden overflow-y-auto"
         style={{
           boxShadow:
             "0 8px 32px 0 rgba(31, 38, 135, 0.37), inset 0 0 32px rgba(255, 255, 255, 0.1)",
