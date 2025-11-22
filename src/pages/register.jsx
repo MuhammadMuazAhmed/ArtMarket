@@ -159,8 +159,10 @@ const Register = () => {
     <div className="flex flex-col md:flex-row p-4 sm:p-6 lg:p-8 gap-2 md:gap-0 fixed inset-0">
       <AnimatedBackground />
       {/* Left Side */}
-      <div className="w-full md:basis-[calc(60%-0.25rem)] min-w-0 overflow-y-auto flex flex-col justify-start md:justify-center px-6 sm:px-10 lg:px-16 items-center bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-md border border-white/30 rounded-xl py-12 md:py-0"
-        style={{ height: "calc(100vh - 2rem)" }}>
+      <div
+        className="w-full md:basis-[calc(60%-0.25rem)] min-w-0 overflow-y-auto flex flex-col justify-start md:justify-center px-6 sm:px-10 lg:px-16 items-center bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-md border border-white/30 rounded-xl py-12 md:py-0"
+        style={{ height: "calc(100vh - 2rem)" }}
+      >
         {/* Buttons */}
         <div className="w-full md:w-2/4 min-w-0 text-center mb-4 md:mb-6">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2">

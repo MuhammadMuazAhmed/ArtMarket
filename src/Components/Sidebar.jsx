@@ -45,12 +45,7 @@ function Sidebar({ page }) {
     "Digital",
     "Plastic",
   ];
-  const size = [
-    "Small",
-    "Medium",
-    "Large",
-    "Extra Large",
-  ];
+  const size = ["Small", "Medium", "Large", "Extra Large"];
   const technique = [
     "Oil Painting",
     "Watercolor",

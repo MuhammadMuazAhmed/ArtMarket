@@ -151,8 +151,10 @@ const LoginPage = () => {
       </div>
 
       {/* Right Side */}
-      <div className="w-full md:w-[65%] flex flex-col justify-start md:justify-center px-6 sm:p-10 lg:px-16 items-center bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-md border border-white/30 rounded-xl md:ml-2 py-12 md:py-0 overflow-y-auto"
-        style={{ height: "calc(100vh - 2rem)" }}>
+      <div
+        className="w-full md:w-[65%] flex flex-col justify-start md:justify-center px-6 sm:p-10 lg:px-16 items-center bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-md border border-white/30 rounded-xl md:ml-2 py-12 md:py-0 overflow-y-auto"
+        style={{ height: "calc(100vh - 2rem)" }}
+      >
         <form onSubmit={handleSubmit} className="mt-4 md:mt-6 w-full max-w-sm">
           <div className="text-center mb-4 md:mb-6">
             <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2">
